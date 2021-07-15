@@ -7,7 +7,8 @@
 	xmlns:browserPicker="clr-namespace:BrowserPicker"
 	xmlns:configuration="clr-namespace:BrowserPicker.Configuration"
 	mc:Ignorable="d" 
-	d:DataContext="{d:DesignInstance browserPicker:ViewModel,d:IsDesignTimeCreatable=true}">
+	d:DataContext="{d:DesignInstance browserPicker:ViewModel,d:IsDesignTimeCreatable=true}"
+	Background="#333">
 	<Grid MinWidth="350">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
@@ -15,7 +16,8 @@
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">
-			<TextBlock Text="{Binding UnderlyingTargetURL}" Foreground="White" Margin="5" TextWrapping="WrapWithOverflow" TextTrimming="CharacterEllipsis" MaxWidth="380" />
+			<TextBlock Text="{Binding UnderlyingTargetURL}" Foreground="White" Margin="5" TextWrapping="WrapWithOverflow" 
+					   TextTrimming="CharacterEllipsis" MaxWidth="380" FontSize="20" />
 		</StackPanel>
 		<ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 			<ItemsControl ItemsSource="{Binding Choices}">
@@ -66,7 +68,7 @@
 												<ColumnDefinition Width="*" />
 												<ColumnDefinition Width="Auto" />
 											</Grid.ColumnDefinitions>
-											<Image Margin="20,0,0,0" Source="{Binding Thumbnail}"></Image>
+											<Image Margin="20,0,0,0" Source="{Binding Thumbnail}" Width="40" Height="40"></Image>
 											<TextBlock Text="{Binding Name}" Grid.Column="1" Foreground="White" Margin="20" FontSize="18">
 												<TextBlock.Style>
 													<Style>
